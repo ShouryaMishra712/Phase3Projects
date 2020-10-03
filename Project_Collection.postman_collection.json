@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "e1e33d19-60b9-4673-9115-2c389666ac54",
+		"name": "Project_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Project_Request1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "84be2d06-cc51-4404-9cd0-bb46f3828266",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () \r",
+							"{\r",
+							"    var n = pm.globals.get(\"Success\");\r",
+							"    pm.response.to.have.status(200);\r",
+							"    n++;\r",
+							"    pm.globals.set(\"Success\", n );\r",
+							"}\r",
+							");\r",
+							"pm.test(\"Body matches string\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.text()).to.include(\"lon\");\r",
+							"}\r",
+							");\r",
+							"pm.test(\"Base Name\", function () \r",
+							"{\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.base).to.eql(\"stations\");\r",
+							"}\r",
+							");\r",
+							"\r",
+							"pm.test(\"Response time is less than 1s\", function () \r",
+							"{\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+							"}\r",
+							");\r",
+							"pm.test(\"Status code name has string\", function () \r",
+							"{\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"}\r",
+							");\r",
+							"pm.test(\"Humidity Check\", function () \r",
+							"{\r",
+							"   var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.main.humidity).to.be.above(75);\r",
+							"}\r",
+							");\r",
+							"pm.test(\"Content-Type is present\", function () \r",
+							"{\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"}\r",
+							");\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/data/{{DataValue}}/{{DataType}}?q={{Place}}&appid={{AppID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"data",
+						"{{DataValue}}",
+						"{{DataType}}"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "{{Place}}"
+						},
+						{
+							"key": "appid",
+							"value": "{{AppID}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4945ed1c-6ed9-43de-a9b9-c57d80cd8cee",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "9c2bb379-8784-42cb-a190-eae25bb81c6c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "c672f0b6-6a54-47ab-b44d-d520135bede9",
+			"key": "DataValue",
+			"value": "2.5"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
