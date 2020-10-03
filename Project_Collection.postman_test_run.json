@@ -1,0 +1,134 @@
+{
+	"id": "1b8bf822-1397-4508-8e7f-e24139274cc0",
+	"name": "Project_Collection",
+	"timestamp": "2020-10-03T10:43:42.423Z",
+	"collection_id": "e1e33d19-60b9-4673-9115-2c389666ac54",
+	"folder_id": 0,
+	"environment_id": "990d61d1-6cad-4cca-866a-eda67a09bff8",
+	"totalPass": 27,
+	"totalFail": 15,
+	"results": [
+		{
+			"id": "eccf8327-b942-48c4-899b-193bc0bb1fdb",
+			"name": "Project_Request1",
+			"time": 1729,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": false,
+				"Base Name": false,
+				"Response time is less than 1s": false,
+				"Status code name has string": true,
+				"Humidity Check": false,
+				"Content-Type is present": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 6,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 4,
+					"fail": 2
+				},
+				"Base Name": {
+					"pass": 1,
+					"fail": 5
+				},
+				"Response time is less than 1s": {
+					"pass": 3,
+					"fail": 3
+				},
+				"Status code name has string": {
+					"pass": 6,
+					"fail": 0
+				},
+				"Humidity Check": {
+					"pass": 1,
+					"fail": 5
+				},
+				"Content-Type is present": {
+					"pass": 6,
+					"fail": 0
+				}
+			},
+			"times": [
+				5301,
+				636,
+				961,
+				2482,
+				924,
+				1729
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Base Name": true,
+					"Response time is less than 1s": false,
+					"Status code name has string": true,
+					"Humidity Check": true,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Base Name": false,
+					"Response time is less than 1s": true,
+					"Status code name has string": true,
+					"Humidity Check": false,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Base Name": false,
+					"Response time is less than 1s": true,
+					"Status code name has string": true,
+					"Humidity Check": false,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Base Name": false,
+					"Response time is less than 1s": false,
+					"Status code name has string": true,
+					"Humidity Check": false,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": false,
+					"Base Name": false,
+					"Response time is less than 1s": true,
+					"Status code name has string": true,
+					"Humidity Check": false,
+					"Content-Type is present": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches string": false,
+					"Base Name": false,
+					"Response time is less than 1s": false,
+					"Status code name has string": true,
+					"Humidity Check": false,
+					"Content-Type is present": true
+				}
+			]
+		}
+	],
+	"count": 6,
+	"totalTime": 12033,
+	"collection": {
+		"requests": [
+			{
+				"id": "eccf8327-b942-48c4-899b-193bc0bb1fdb",
+				"method": "GET"
+			}
+		]
+	}
+}
